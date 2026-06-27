@@ -1,5 +1,6 @@
 # Data snapshots (generated daily)
 data/*.json
+!data/2026-06-27.json
 !data/.gitkeep
 
 # Debug artifacts
