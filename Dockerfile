@@ -1,25 +1,14 @@
 FROM nginx:alpine
 
-# Install python for price fetcher
-RUN apk add --no-cache python3 py3-pip curl
+# Copy static dashboard
+COPY index.html /usr/share/nginx/html/
+COPY cards.json /usr/share/nginx/html/
 
-# Nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Health check
+COPY health_check.txt /usr/share/nginx/html/health
 
-# App: static dashboard + data
-COPY index.html /app/
-COPY cards.json /app/
-COPY fetch_prices.py /app/
-
-# Data directory (served by nginx)
-RUN mkdir -p /app/data && chmod 755 /app/data
-
-# Cron for daily price fetch
-RUN echo "0 9 * * * cd /app && python3 fetch_prices.py" > /etc/crontabs/root
-# Also run once on startup after a short delay
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# Nginx config — serve data/ as static files
+RUN mkdir -p /usr/share/nginx/html/data
+COPY data/.gitkeep /usr/share/nginx/html/data/
 
 EXPOSE 80
-
-ENTRYPOINT ["/entrypoint.sh"]
