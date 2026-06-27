@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserved List Price Tracker</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #21262d;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text2: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --red: #f85149;
+    --gold: #d2991d;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  header h1 span { color: var(--gold); }
+  .controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  select, button {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  select:hover, button:hover { border-color: var(--accent); }
+  button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .time-btns { display: flex; gap: 4px; }
+  .time-btns button { padding: 6px 12px; font-size: 12px; border-radius: 4px; }
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .chart-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .current-prices {
+    display: flex;
+    gap: 24px;
+  }
+  .price-badge {
+    text-align: center;
+    padding: 0 16px;
+    border-left: 1px solid var(--border);
+  }
+  .price-badge:first-child { border-left: none; }
+  .price-badge .label { font-size: 11px; color: var(--text2); text-transform: uppercase; }
+  .price-badge .value { font-size: 22px; font-weight: 700; }
+  .price-badge .value.eur { color: var(--accent); }
+  .price-badge .value.usd { color: var(--green); }
+  .price-badge .value.goldfish { color: var(--gold); }
+  #priceChart { width: 100%; height: 400px; }
+  .table-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .table-controls { display: flex; gap: 8px; align-items: center; }
+  #searchInput {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    width: 200px;
+  }
+  #searchInput:focus { outline: none; border-color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th {
+    text-align: left;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+  }
+  th:hover { color: var(--text); }
+  th .sort-arrow { font-size: 10px; margin-left: 4px; }
+  td {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:hover td { background: var(--surface2); }
+  td.name { font-weight: 600; }
+  td.name .set-tag {
+    font-size: 10px;
+    color: var(--text2);
+    background: var(--surface2);
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+  }
+  td.price {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+  }
+  td.price.eur { color: var(--accent); }
+  td.price.usd { color: var(--green); }
+  td.price.na { color: var(--text2); font-style: italic; }
+  .delta-up { color: var(--green); }
+  .delta-down { color: var(--red); }
+  .loading { text-align: center; padding: 48px; color: var(--text2); }
+  .footer {
+    text-align: center;
+    padding: 16px;
+    color: var(--text2);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>📊 Reserved List <span>Price Tracker</span></h1>
+  <div class="controls">
+    <select id="cardSelect">
+      <option value="">-- Select a card --</option>
+    </select>
+    <div class="time-btns" id="timeButtons">
+      <button data-range="30">1M</button>
+      <button data-range="90">3M</button>
+      <button data-range="180">6M</button>
+      <button data-range="365" class="active">1Y</button>
+      <button data-range="0">ALL</button>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="chart-section" id="chartSection" style="display:none">
+    <div class="chart-header">
+      <h2 id="chartTitle">Select a card</h2>
+      <div class="current-prices" id="currentPrices"></div>
+    </div>
+    <canvas id="priceChart"></canvas>
+  </div>
+  <div class="chart-section" style="display:block" id="placeholder">
+    <div class="loading">⬆ Select a card above to view price history</div>
+  </div>
+  <div class="table-section">
+    <div class="table-header">
+      <h3>All Tracked Cards</h3>
+      <div class="table-controls">
+        <input type="text" id="searchInput" placeholder="Filter cards...">
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="name">Card <span class="sort-arrow">↕</span></th>
+          <th data-sort="set">Set <span class="sort-arrow">↕</span></th>
+          <th data-sort="eur">Cardmarket (EUR) <span class="sort-arrow">↕</span></th>
+          <th data-sort="usd">TCGPlayer (USD) <span class="sort-arrow">↕</span></th>
+          <th data-sort="category">Category <span class="sort-arrow">↕</span></th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr><td colspan="5" class="loading">Loading data...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<div class="footer" id="footer">Loading...</div>
+
+<script>
+// ─── STATE ─────────────────────────────────────────────────
+let allSnapshots = [];    // [{date, prices: [{name, category, set, prices: {eur,usd}}]}]
+let allCards = [];        // [{name, category, category_label, set, ...}]
+let historyData = {};     // {cardName: {series: [[ts,price],...]}}
+let chart = null;
+let currentRange = 365;
+
+// ─── HELPERS ───────────────────────────────────────────────
+function fmtPrice(val) {
+  if (val == null) return '—';
+  if (val >= 1000) return val.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+  return val.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
+
+// ─── DATA LOADING ──────────────────────────────────────────
+async function loadData() {
+  try {
+    // Load cards.json
+    const cardsRes = await fetch('cards.json');
+    const cardsConfig = await cardsRes.json();
+
+    // Flatten cards
+    allCards = [];
+    const categorySet = new Set();
+    for (const [key, cat] of Object.entries(cardsConfig.categories)) {
+      categorySet.add(key);
+      for (const c of cat.cards) {
+        allCards.push({
+          name: c.name,
+          category: key,
+          category_label: cat.label,
+          set: c.set,
+          eur: null,
+          usd: null,
+          scryfall_uri: null,
+        });
+      }
+    }
+
+    // Populate category filter
+    const catFilter = document.getElementById('categoryFilter');
+    for (const key of [...categorySet].sort()) {
+      const opt = document.createElement('option');
+      opt.value = key;
+      const cat = cardsConfig.categories[key];
+      opt.textContent = cat ? cat.label : key;
+      catFilter.appendChild(opt);
+    }
+
+    // Populate card dropdown
+    const select = document.getElementById('cardSelect');
+    for (const [key, cat] of Object.entries(cardsConfig.categories)) {
+      const group = document.createElement('optgroup');
+      group.label = cat.label;
+      for (const c of cat.cards) {
+        const opt = document.createElement('option');
+        opt.value = c.name;
+        opt.textContent = `${c.name} (${c.set})`;
+        group.appendChild(opt);
+      }
+      select.appendChild(group);
+    }
+
+    // Fetch all daily snapshots
+    const snapRes = await fetch('data/');
+    // Can't list directory via fetch — try known dates or iterate
+    // Strategy: try loading today's date, then walk backward
+    await loadSnapshots();
+
+    // Try loading history files
+    await loadHistory();
+
+    // Update table
+    updateTable();
+    updateFooter();
+  } catch (e) {
+    console.error('Data load error:', e);
+    document.getElementById('tableBody').innerHTML =
+      '<tr><td colspan="5" class="loading">Data error — run <code>python3 fetch_prices.py</code> first, then <code>python3 -m http.server 8080</code> and reload.</td></tr>';
+  }
+}
+
+async function loadSnapshots() {
+  const today = new Date();
+  const snapshots = [];
+
+  // Try up to 365 days back
+  for (let i = 0; i < 365; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().slice(0, 10);
+    try {
+      const res = await fetch(`data/${dateStr}.json`);
+      if (res.ok) {
+        const snap = await res.json();
+        snapshots.push(snap);
+      }
+    } catch (e) {
+      // Skip missing dates
+    }
+  }
+
+  allSnapshots = snapshots.sort((a, b) => a.date.localeCompare(b.date));
+
+  // Merge latest prices into allCards
+  if (allSnapshots.length > 0) {
+    const latest = allSnapshots[allSnapshots.length - 1];
+    for (const card of allCards) {
+      const match = latest.prices.find(p => p.name === card.name);
+      if (match) {
+        card.eur = match.prices?.eur ?? null;
+        card.usd = match.prices?.usd ?? null;
+        card.scryfall_uri = match.scryfall_uri ?? null;
+      }
+    }
+  }
+}
+
+async function loadHistory() {
+  // Try loading history files for each card from data/history/
+  for (const card of allCards) {
+    const safeName = card.name.replace(/\//g, '_').replace(/ /g, '_');
+    try {
+      const res = await fetch(`data/history/${safeName}.json`);
+      if (res.ok) {
+        const data = await res.json();
+        historyData[card.name] = data;
+      }
+    } catch (e) {
+      // No history file for this card yet
+    }
+  }
+}
+
+// ─── CHART ─────────────────────────────────────────────────
+let cardChart = null;
+
+function selectCard(cardName) {
+  document.getElementById('cardSelect').value = cardName;
+  document.getElementById('placeholder').style.display = 'none';
+  document.getElementById('chartSection').style.display = 'block';
+  document.getElementById('chartTitle').textContent = cardName;
+  updateChart(cardName);
+  updateCurrentPrices(cardName);
+}
+
+function updateCurrentPrices(cardName) {
+  const div = document.getElementById('currentPrices');
+  const card = allCards.find(c => c.name === cardName);
+  if (!card) { div.innerHTML = ''; return; }
+
+  const goldfishPrice = getGoldfishLatest(cardName);
+
+  div.innerHTML = `
+    <div class="price-badge">
+      <div class="label">Cardmarket (EUR)</div>
+      <div class="value eur">€${fmtPrice(card.eur)}</div>
+    </div>
+    <div class="price-badge">
+      <div class="label">TCGPlayer (USD)</div>
+      <div class="value usd">$${fmtPrice(card.usd)}</div>
+    </div>
+    ${goldfishPrice ? `
+    <div class="price-badge">
+      <div class="label">MTGGoldfish</div>
+      <div class="value goldfish">$${fmtPrice(goldfishPrice)}</div>
+    </div>` : ''}
+  `;
+}
+
+function getGoldfishLatest(cardName) {
+  const h = historyData[cardName];
+  if (!h || !h.series || h.series.length === 0) return null;
+  return h.series[h.series.length - 1][1];
+}
+
+function updateChart(cardName) {
+  const ctx = document.getElementById('priceChart').getContext('2d');
+
+  // Build datasets
+  const datasets = [];
+
+  // Cardmarket (from daily snapshots)
+  const eurData = [];
+  for (const snap of allSnapshots) {
+    const entry = snap.prices.find(p => p.name === cardName);
+    if (entry && entry.prices?.eur != null) {
+      eurData.push({x: snap.date, y: entry.prices.eur});
+    }
+  }
+  if (eurData.length > 0) {
+    datasets.push({
+      label: 'Cardmarket (EUR)',
+      data: eurData,
+      borderColor: '#58a6ff',
+      backgroundColor: 'rgba(88,166,255,0.1)',
+      fill: false,
+      tension: 0.3,
+      pointRadius: 0,
+      yAxisID: 'y',
+    });
+  }
+
+  // TCGPlayer (from daily snapshots)
+  const usdData = [];
+  for (const snap of allSnapshots) {
+    const entry = snap.prices.find(p => p.name === cardName);
+    if (entry && entry.prices?.usd != null) {
+      usdData.push({x: snap.date, y: entry.prices.usd});
+    }
+  }
+  if (usdData.length > 0) {
+    datasets.push({
+      label: 'TCGPlayer (USD)',
+      data: usdData,
+      borderColor: '#3fb950',
+      backgroundColor: 'rgba(63,185,80,0.1)',
+      fill: false,
+      tension: 0.3,
+      pointRadius: 0,
+      yAxisID: 'y',
+    });
+  }
+
+  // MTGGoldfish history
+  const goldfishData = historyData[cardName];
+  if (goldfishData && goldfishData.series) {
+    const gfPoints = goldfishData.series.map(([ts, price]) => ({
+      x: new Date(ts).toISOString().slice(0, 10),
+      y: price,
+    }));
+    // Filter by current range
+    const cutoff = getCutoffDate(currentRange);
+    const filtered = cutoff ? gfPoints.filter(p => p.x >= cutoff) : gfPoints;
+
+    if (filtered.length > 0) {
+      datasets.push({
+        label: 'MTGGoldfish (USD)',
+        data: filtered,
+        borderColor: '#d2991d',
+        backgroundColor: 'rgba(210,153,29,0.05)',
+        fill: false,
+        tension: 0.2,
+        pointRadius: 0,
+        borderDash: [4, 4],
+        yAxisID: 'y',
+      });
+    }
+  }
+
+  if (datasets.length === 0) {
+    document.getElementById('priceChart').style.display = 'none';
+    document.getElementById('chartTitle').textContent = cardName + ' — no price data yet';
+    document.getElementById('currentPrices').innerHTML = '<span style="color:var(--text2)">Run fetch_prices.py to collect data</span>';
+    return;
+  }
+
+  document.getElementById('priceChart').style.display = 'block';
+
+  if (cardChart) cardChart.destroy();
+
+  cardChart = new Chart(ctx, {
+    type: 'line',
+    data: { datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { color: '#8b949e', usePointStyle: true, padding: 20 }
+        },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              return `${ctx.dataset.label}: ${ctx.parsed.y >= 1 ? '$' + ctx.parsed.y.toLocaleString('en-US', {minimumFractionDigits: 2}) : ctx.parsed.y}`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          type: 'time',
+          time: { unit: getTimeUnit(currentRange) },
+          grid: { color: '#21262d' },
+          ticks: { color: '#8b949e', maxTicksLimit: 20 }
+        },
+        y: {
+          type: 'linear',
+          grid: { color: '#21262d' },
+          ticks: {
+            color: '#8b949e',
+            callback: (v) => v >= 1000 ? '$' + (v/1000).toFixed(1) + 'k' : '$' + v
+          }
+        }
+      }
+    }
+  });
+
+  document.getElementById('priceChart').style.height = '400px';
+}
+
+function getCutoffDate(days) {
+  if (!days || days === 0) return null;
+  const d = new Date();
+  d.setDate(d.getDate() - days);
+  return d.toISOString().slice(0, 10);
+}
+
+function getTimeUnit(days) {
+  if (days <= 30) return 'day';
+  if (days <= 180) return 'week';
+  if (days <= 730) return 'month';
+  return 'year';
+}
+
+// ─── TABLE ─────────────────────────────────────────────────
+let sortCol = 'name';
+let sortAsc = true;
+
+function updateTable(filter = '', category = '') {
+  const tbody = document.getElementById('tableBody');
+  let cards = [...allCards];
+
+  // Filter
+  if (filter) {
+    const q = filter.toLowerCase();
+    cards = cards.filter(c => c.name.toLowerCase().includes(q));
+  }
+  if (category) {
+    cards = cards.filter(c => c.category === category);
+  }
+
+  // Sort
+  cards.sort((a, b) => {
+    let va, vb;
+    switch (sortCol) {
+      case 'name': va = a.name; vb = b.name; break;
+      case 'set': va = a.set || ''; vb = b.set || ''; break;
+      case 'eur': va = a.eur ?? -1; vb = b.eur ?? -1; break;
+      case 'usd': va = a.usd ?? -1; vb = b.usd ?? -1; break;
+      case 'category': va = a.category_label; vb = b.category_label; break;
+      default: va = a.name; vb = b.name;
+    }
+    const cmp = typeof va === 'string' ? va.localeCompare(vb) : va - vb;
+    return sortAsc ? cmp : -cmp;
+  });
+
+  tbody.innerHTML = cards.map(c => `
+    <tr data-card="${c.name.replace(/"/g, '&quot;')}" style="cursor:pointer">
+      <td class="name">${c.name}<span class="set-tag">${c.set || '—'}</span></td>
+      <td style="color: var(--text2)">${c.set || '—'}</td>
+      <td class="price eur">${c.eur != null ? '€' + c.eur.toLocaleString('en-US', {minimumFractionDigits: 2}) : '<span class="na">—</span>'}</td>
+      <td class="price usd">${c.usd != null ? '$' + c.usd.toLocaleString('en-US', {minimumFractionDigits: 2}) : '<span class="na">—</span>'}</td>
+      <td style="color: var(--text2)">${c.category_label}</td>
+    </tr>
+  `).join('') || '<tr><td colspan="5" class="loading">No cards match</td></tr>';
+
+  // Attach click handlers
+  tbody.querySelectorAll('tr[data-card]').forEach(row => {
+    row.addEventListener('click', () => selectCard(row.dataset.card));
+  });
+}
+
+function updateFooter() {
+  const footer = document.getElementById('footer');
+  if (allSnapshots.length > 0) {
+    const dates = allSnapshots.map(s => s.date).sort();
+    footer.textContent = `Data range: ${dates[0]} → ${dates[dates.length-1]} · ${allSnapshots.length} snapshots · ${Object.keys(historyData).length} cards w/ historical data · Updated daily via cron`;
+  } else {
+    footer.textContent = 'No price data yet. Run: python3 fetch_prices.py';
+  }
+}
+
+// ─── EVENT HANDLERS ────────────────────────────────────────
+document.getElementById('cardSelect').addEventListener('change', (e) => {
+  if (e.target.value) selectCard(e.target.value);
+});
+
+document.querySelectorAll('#timeButtons button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#timeButtons button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentRange = parseInt(btn.dataset.range);
+    const selected = document.getElementById('cardSelect').value;
+    if (selected) updateChart(selected);
+  });
+});
+
+document.querySelectorAll('th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    const col = th.dataset.sort;
+    if (sortCol === col) sortAsc = !sortAsc;
+    else { sortCol = col; sortAsc = true; }
+    updateTable(
+      document.getElementById('searchInput').value,
+      document.getElementById('categoryFilter').value
+    );
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  updateTable(e.target.value, document.getElementById('categoryFilter').value);
+});
+
+document.getElementById('categoryFilter').addEventListener('change', (e) => {
+  updateTable(document.getElementById('searchInput').value, e.target.value);
+});
+
+// ─── INIT ──────────────────────────────────────────────────
+loadData();
+</script>
+</body>
+</html>

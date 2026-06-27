@@ -1,0 +1,145 @@
+{
+  "description": "Top Reserved List cards tracked daily",
+  "last_updated": "2026-06-27",
+  "categories": {
+    "power_nine": {
+      "label": "Power Nine",
+      "cards": [
+        {"name": "Black Lotus", "set": "LEA", "scryfall_query": "!\"Black Lotus\" set:lea"},
+        {"name": "Ancestral Recall", "set": "LEA", "scryfall_query": "!\"Ancestral Recall\" set:lea"},
+        {"name": "Time Walk", "set": "LEA", "scryfall_query": "!\"Time Walk\" set:lea"},
+        {"name": "Timetwister", "set": "LEA", "scryfall_query": "!\"Timetwister\" set:lea"},
+        {"name": "Mox Pearl", "set": "LEA", "scryfall_query": "!\"Mox Pearl\" set:lea"},
+        {"name": "Mox Sapphire", "set": "LEA", "scryfall_query": "!\"Mox Sapphire\" set:lea"},
+        {"name": "Mox Jet", "set": "LEA", "scryfall_query": "!\"Mox Jet\" set:lea"},
+        {"name": "Mox Ruby", "set": "LEA", "scryfall_query": "!\"Mox Ruby\" set:lea"},
+        {"name": "Mox Emerald", "set": "LEA", "scryfall_query": "!\"Mox Emerald\" set:lea"}
+      ]
+    },
+    "dual_lands": {
+      "label": "Dual Lands",
+      "cards": [
+        {"name": "Underground Sea", "set": "3ED", "scryfall_query": "!\"Underground Sea\" set:3ed"},
+        {"name": "Volcanic Island", "set": "3ED", "scryfall_query": "!\"Volcanic Island\" set:3ed"},
+        {"name": "Tropical Island", "set": "3ED", "scryfall_query": "!\"Tropical Island\" set:3ed"},
+        {"name": "Tundra", "set": "3ED", "scryfall_query": "!\"Tundra\" set:3ed"},
+        {"name": "Bayou", "set": "3ED", "scryfall_query": "!\"Bayou\" set:3ed"},
+        {"name": "Badlands", "set": "3ED", "scryfall_query": "!\"Badlands\" set:3ed"},
+        {"name": "Taiga", "set": "3ED", "scryfall_query": "!\"Taiga\" set:3ed"},
+        {"name": "Savannah", "set": "3ED", "scryfall_query": "!\"Savannah\" set:3ed"},
+        {"name": "Scrubland", "set": "3ED", "scryfall_query": "!\"Scrubland\" set:3ed"},
+        {"name": "Plateau", "set": "3ED", "scryfall_query": "!\"Plateau\" set:3ed"}
+      ]
+    },
+    "supercycle_lands": {
+      "label": "Cradle Supercycle",
+      "cards": [
+        {"name": "Gaea's Cradle", "set": "USG", "scryfall_query": "!\"Gaea's Cradle\" set:usg"},
+        {"name": "Serra's Sanctum", "set": "USG", "scryfall_query": "!\"Serra's Sanctum\" set:usg"},
+        {"name": "Tolarian Academy", "set": "USG", "scryfall_query": "!\"Tolarian Academy\" set:usg"}
+      ]
+    },
+    "fast_mana": {
+      "label": "Fast Mana",
+      "cards": [
+        {"name": "Mox Diamond", "set": "STH", "scryfall_query": "!\"Mox Diamond\" set:sth"},
+        {"name": "Lion's Eye Diamond", "set": "MIR", "scryfall_query": "!\"Lion's Eye Diamond\" set:mir"},
+        {"name": "Grim Monolith", "set": "ULG", "scryfall_query": "!\"Grim Monolith\" set:ulg"},
+        {"name": "Mana Crypt", "set": "BOK", "scryfall_query": "!\"Mana Crypt\" set:bok unique:prints is:booster"},
+        {"name": "Metalworker", "set": "UDS", "scryfall_query": "!\"Metalworker\" set:uds"},
+        {"name": "Mana Vault", "set": "LEB", "scryfall_query": "!\"Mana Vault\" set:leb"}
+      ]
+    },
+    "card_draw_tutors": {
+      "label": "Card Draw & Tutors",
+      "cards": [
+        {"name": "Yawgmoth's Will", "set": "USG", "scryfall_query": "!\"Yawgmoth's Will\" set:usg"},
+        {"name": "Wheel of Fortune", "set": "LEB", "scryfall_query": "!\"Wheel of Fortune\" set:leb"},
+        {"name": "Intuition", "set": "TMP", "scryfall_query": "!\"Intuition\" set:tmp"},
+        {"name": "Vampiric Tutor", "set": "VIS", "scryfall_query": "!\"Vampiric Tutor\" set:vis"},
+        {"name": "Demonic Tutor", "set": "LEA", "scryfall_query": "!\"Demonic Tutor\" set:lea"},
+        {"name": "Survival of the Fittest", "set": "EXO", "scryfall_query": "!\"Survival of the Fittest\" set:exo"},
+        {"name": "Earthcraft", "set": "TMP", "scryfall_query": "!\"Earthcraft\" set:tmp"},
+        {"name": "Aluren", "set": "TMP", "scryfall_query": "!\"Aluren\" set:tmp"},
+        {"name": "Recurring Nightmare", "set": "EXO", "scryfall_query": "!\"Recurring Nightmare\" set:exo"},
+        {"name": "Memory Jar", "set": "ULG", "scryfall_query": "!\"Memory Jar\" set:ulg"},
+        {"name": "Time Spiral", "set": "USG", "scryfall_query": "!\"Time Spiral\" set:usg"},
+        {"name": "Mind Over Matter", "set": "EXO", "scryfall_query": "!\"Mind Over Matter\" set:exo"}
+      ]
+    },
+    "utility_staples": {
+      "label": "Utility & Staples",
+      "cards": [
+        {"name": "Gilded Drake", "set": "USG", "scryfall_query": "!\"Gilded Drake\" set:usg"},
+        {"name": "Null Rod", "set": "WTH", "scryfall_query": "!\"Null Rod\" set:wth"},
+        {"name": "Candelabra of Tawnos", "set": "ATQ", "scryfall_query": "!\"Candelabra of Tawnos\" set:atq"},
+        {"name": "Mishra's Workshop", "set": "ATQ", "scryfall_query": "!\"Mishra's Workshop\" set:atq"},
+        {"name": "Bazaar of Baghdad", "set": "ARN", "scryfall_query": "!\"Bazaar of Baghdad\" set:arn"},
+        {"name": "The Tabernacle at Pendrell Vale", "set": "LEG", "scryfall_query": "!\"The Tabernacle at Pendrell Vale\" set:leg"},
+        {"name": "City of Traitors", "set": "EXO", "scryfall_query": "!\"City of Traitors\" set:exo"},
+        {"name": "Lake of the Dead", "set": "ALL", "scryfall_query": "!\"Lake of the Dead\" set:all"},
+        {"name": "Volrath's Stronghold", "set": "STH", "scryfall_query": "!\"Volrath's Stronghold\" set:sth"},
+        {"name": "Copy Artifact", "set": "LEB", "scryfall_query": "!\"Copy Artifact\" set:leb"},
+        {"name": "Transmute Artifact", "set": "ATQ", "scryfall_query": "!\"Transmute Artifact\" set:atq"},
+        {"name": "Power Artifact", "set": "ATQ", "scryfall_query": "!\"Power Artifact\" set:atq"},
+        {"name": "Nether Void", "set": "LEG", "scryfall_query": "!\"Nether Void\" set:leg"},
+        {"name": "Chains of Mephistopheles", "set": "LEG", "scryfall_query": "!\"Chains of Mephistopheles\" set:leg"},
+        {"name": "The Abyss", "set": "LEG", "scryfall_query": "!\"The Abyss\" set:leg"},
+        {"name": "Sliver Queen", "set": "STH", "scryfall_query": "!\"Sliver Queen\" set:sth"}
+      ]
+    }
+  },
+  "goldfish_urls": {
+    "Black Lotus": "https://www.mtggoldfish.com/price/Alpha/Black+Lotus#paper",
+    "Ancestral Recall": "https://www.mtggoldfish.com/price/Alpha/Ancestral+Recall#paper",
+    "Time Walk": "https://www.mtggoldfish.com/price/Alpha/Time+Walk#paper",
+    "Timetwister": "https://www.mtggoldfish.com/price/Alpha/Timetwister#paper",
+    "Mox Pearl": "https://www.mtggoldfish.com/price/Alpha/Mox+Pearl#paper",
+    "Mox Sapphire": "https://www.mtggoldfish.com/price/Alpha/Mox+Sapphire#paper",
+    "Mox Jet": "https://www.mtggoldfish.com/price/Alpha/Mox+Jet#paper",
+    "Mox Ruby": "https://www.mtggoldfish.com/price/Alpha/Mox+Ruby#paper",
+    "Mox Emerald": "https://www.mtggoldfish.com/price/Alpha/Mox+Emerald#paper",
+    "Underground Sea": "https://www.mtggoldfish.com/price/Revised/Underground+Sea#paper",
+    "Volcanic Island": "https://www.mtggoldfish.com/price/Revised/Volcanic+Island#paper",
+    "Tropical Island": "https://www.mtggoldfish.com/price/Revised/Tropical+Island#paper",
+    "Tundra": "https://www.mtggoldfish.com/price/Revised/Tundra#paper",
+    "Bayou": "https://www.mtggoldfish.com/price/Revised/Bayou#paper",
+    "Badlands": "https://www.mtggoldfish.com/price/Revised/Badlands#paper",
+    "Taiga": "https://www.mtggoldfish.com/price/Revised/Taiga#paper",
+    "Savannah": "https://www.mtggoldfish.com/price/Revised/Savannah#paper",
+    "Scrubland": "https://www.mtggoldfish.com/price/Revised/Scrubland#paper",
+    "Plateau": "https://www.mtggoldfish.com/price/Revised/Plateau#paper",
+    "Gaea's Cradle": "https://www.mtggoldfish.com/price/Urzas+Saga/Gaeas+Cradle#paper",
+    "Serra's Sanctum": "https://www.mtggoldfish.com/price/Urzas+Saga/Serras+Sanctum#paper",
+    "Tolarian Academy": "https://www.mtggoldfish.com/price/Urzas+Saga/Tolarian+Academy#paper",
+    "Mox Diamond": "https://www.mtggoldfish.com/price/Stronghold/Mox+Diamond#paper",
+    "Lion's Eye Diamond": "https://www.mtggoldfish.com/price/Mirage/Lions+Eye+Diamond#paper",
+    "Grim Monolith": "https://www.mtggoldfish.com/price/Urzas+Legacy/Grim+Monolith#paper",
+    "Metalworker": "https://www.mtggoldfish.com/price/Urzas+Destiny/Metalworker#paper",
+    "Mana Vault": "https://www.mtggoldfish.com/price/Beta/Mana+Vault#paper",
+    "Yawgmoth's Will": "https://www.mtggoldfish.com/price/Urzas+Saga/Yawgmoths+Will#paper",
+    "Wheel of Fortune": "https://www.mtggoldfish.com/price/Beta/Wheel+of+Fortune#paper",
+    "Intuition": "https://www.mtggoldfish.com/price/Tempest/Intuition#paper",
+    "Vampiric Tutor": "https://www.mtggoldfish.com/price/Visions/Vampiric+Tutor#paper",
+    "Demonic Tutor": "https://www.mtggoldfish.com/price/Alpha/Demonic+Tutor#paper",
+    "Survival of the Fittest": "https://www.mtggoldfish.com/price/Exodus/Survival+of+the+Fittest#paper",
+    "Earthcraft": "https://www.mtggoldfish.com/price/Tempest/Earthcraft#paper",
+    "Aluren": "https://www.mtggoldfish.com/price/Tempest/Aluren#paper",
+    "Recurring Nightmare": "https://www.mtggoldfish.com/price/Exodus/Recurring+Nightmare#paper",
+    "Memory Jar": "https://www.mtggoldfish.com/price/Urzas+Legacy/Memory+Jar#paper",
+    "Time Spiral": "https://www.mtggoldfish.com/price/Urzas+Saga/Time+Spiral#paper",
+    "Mind Over Matter": "https://www.mtggoldfish.com/price/Exodus/Mind+Over+Matter#paper",
+    "Gilded Drake": "https://www.mtggoldfish.com/price/Urzas+Saga/Gilded+Drake#paper",
+    "Null Rod": "https://www.mtggoldfish.com/price/Weatherlight/Null+Rod#paper",
+    "Candelabra of Tawnos": "https://www.mtggoldfish.com/price/Antiquities/Candelabra+of+Tawnos#paper",
+    "Mishra's Workshop": "https://www.mtggoldfish.com/price/Antiquities/Mishras+Workshop#paper",
+    "Bazaar of Baghdad": "https://www.mtggoldfish.com/price/Arabian+Nights/Bazaar+of+Baghdad#paper",
+    "The Tabernacle at Pendrell Vale": "https://www.mtggoldfish.com/price/Legends/The+Tabernacle+at+Pendrell+Vale#paper",
+    "City of Traitors": "https://www.mtggoldfish.com/price/Exodus/City+of+Traitors#paper",
+    "Volrath's Stronghold": "https://www.mtggoldfish.com/price/Stronghold/Volraths+Stronghold#paper",
+    "Transmute Artifact": "https://www.mtggoldfish.com/price/Antiquities/Transmute+Artifact#paper",
+    "Nether Void": "https://www.mtggoldfish.com/price/Legends/Nether+Void#paper",
+    "Chains of Mephistopheles": "https://www.mtggoldfish.com/price/Legends/Chains+of+Mephistopheles#paper",
+    "The Abyss": "https://www.mtggoldfish.com/price/Legends/The+Abyss#paper"
+  }
+}

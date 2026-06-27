@@ -1,0 +1,24 @@
+# Data snapshots (generated daily)
+data/*.json
+!data/.gitkeep
+
+# Debug artifacts
+debug_*.html
+debug_*.py
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Environment
+.env
+
+# Backup scripts
+coolify_explore.py
