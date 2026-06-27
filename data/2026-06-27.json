@@ -1,0 +1,734 @@
+{
+  "date": "2026-06-27",
+  "fetched_at": "2026-06-27T07:56:59.912127+00:00",
+  "count": 56,
+  "prices": [
+    {
+      "name": "Black Lotus",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 30975.14,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/232/black-lotus?utm_source=api",
+      "scryfall_id": "b0faa7f2-b547-42c4-a810-839da50dadfe",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Ancestral Recall",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 17278.17,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/47/ancestral-recall?utm_source=api",
+      "scryfall_id": "70e7ddf2-5604-41e7-bb9d-ddd03d3e9d0b",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Time Walk",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 16490.92,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/83/time-walk?utm_source=api",
+      "scryfall_id": "e0139f60-d48e-46fb-9f5a-1e3d7558c834",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Timetwister",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 19126.12,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/84/timetwister?utm_source=api",
+      "scryfall_id": "9a49dc44-616e-4bdd-8220-0bb71eccc512",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Mox Pearl",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 8027.89,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/263/mox-pearl?utm_source=api",
+      "scryfall_id": "8ebe4be7-e12a-4596-a899-fbd5b152e879",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Mox Sapphire",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 20089.89,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/265/mox-sapphire?utm_source=api",
+      "scryfall_id": "82da0972-b17b-4600-9efd-e9430a0db04b",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Mox Jet",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 19327.85,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/262/mox-jet?utm_source=api",
+      "scryfall_id": "92bcd1ce-19b1-4d78-8b09-95242ca08d76",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Mox Ruby",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 7997.15,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/264/mox-ruby?utm_source=api",
+      "scryfall_id": "8945585f-4773-493d-a0fe-d707db910b38",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Mox Emerald",
+      "category": "power_nine",
+      "category_label": "Power Nine",
+      "set": "LEA",
+      "prices": {
+        "eur": 10449.64,
+        "usd": 4453.0
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/261/mox-emerald?utm_source=api",
+      "scryfall_id": "b0e1427c-05cd-465b-be59-97ed6e39f7ba",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Underground Sea",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 732.85,
+        "usd": 958.33
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/290/underground-sea?utm_source=api",
+      "scryfall_id": "1f35877c-e66c-4ef0-842a-f68cd233ae4b",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Volcanic Island",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 517.65,
+        "usd": 856.43
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/291/volcanic-island?utm_source=api",
+      "scryfall_id": "b12e5430-0e80-47dd-80ac-85728b656a24",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Tropical Island",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 345.11,
+        "usd": 569.13
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/288/tropical-island?utm_source=api",
+      "scryfall_id": "a0f5c6bc-65dc-42a1-a62d-a0b101310a1f",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Tundra",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 357.85,
+        "usd": 603.74
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/289/tundra?utm_source=api",
+      "scryfall_id": "9c9d5f72-e199-4d5b-ae7e-cc5b9bdfae99",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Bayou",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 269.87,
+        "usd": 445.18
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/283/bayou?utm_source=api",
+      "scryfall_id": "56355ff3-2232-4a11-b868-aec9a50b9ee5",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Badlands",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 310.54,
+        "usd": 518.85
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/282/badlands?utm_source=api",
+      "scryfall_id": "56058359-3c0b-49db-a0ce-9ded4c3f4372",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Taiga",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 251.68,
+        "usd": 407.65
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/287/taiga?utm_source=api",
+      "scryfall_id": "54c5c65a-a444-4e0f-ae44-a3722cdd32a1",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Savannah",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 228.08,
+        "usd": 394.04
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/285/savannah?utm_source=api",
+      "scryfall_id": "5ae71290-c133-406c-8b17-9ea22b437806",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Scrubland",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 268.77,
+        "usd": 431.12
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/286/scrubland?utm_source=api",
+      "scryfall_id": "472034a2-0ba9-4876-ab7a-aa7013d603bb",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Plateau",
+      "category": "dual_lands",
+      "category_label": "Dual Lands",
+      "set": "3ED",
+      "prices": {
+        "eur": 246.02,
+        "usd": 357.59
+      },
+      "scryfall_uri": "https://scryfall.com/card/3ed/284/plateau?utm_source=api",
+      "scryfall_id": "c6ae9cff-8646-4069-8761-df734e067beb",
+      "released_at": "1994-04-11"
+    },
+    {
+      "name": "Gaea's Cradle",
+      "category": "supercycle_lands",
+      "category_label": "Cradle Supercycle",
+      "set": "USG",
+      "prices": {
+        "eur": 1267.91,
+        "usd": 1504.77
+      },
+      "scryfall_uri": "https://scryfall.com/card/usg/321/gaeas-cradle?utm_source=api",
+      "scryfall_id": "25b0b816-0583-44aa-9dc5-f3ff48993a51",
+      "released_at": "1998-10-12"
+    },
+    {
+      "name": "Serra's Sanctum",
+      "category": "supercycle_lands",
+      "category_label": "Cradle Supercycle",
+      "set": "USG",
+      "prices": {
+        "eur": 402.46,
+        "usd": 487.29
+      },
+      "scryfall_uri": "https://scryfall.com/card/usg/325/serras-sanctum?utm_source=api",
+      "scryfall_id": "f7a18130-dbaa-4657-a885-3a96a985935a",
+      "released_at": "1998-10-12"
+    },
+    {
+      "name": "Tolarian Academy",
+      "category": "supercycle_lands",
+      "category_label": "Cradle Supercycle",
+      "set": "USG",
+      "prices": {
+        "eur": 94.86,
+        "usd": 177.5
+      },
+      "scryfall_uri": "https://scryfall.com/card/usg/330/tolarian-academy?utm_source=api",
+      "scryfall_id": "ad7ac9a5-340f-4509-826c-7b9416d47887",
+      "released_at": "1998-10-12"
+    },
+    {
+      "name": "Mox Diamond",
+      "category": "fast_mana",
+      "category_label": "Fast Mana",
+      "set": "STH",
+      "prices": {
+        "eur": 748.24,
+        "usd": 1118.84
+      },
+      "scryfall_uri": "https://scryfall.com/card/sth/138/mox-diamond?utm_source=api",
+      "scryfall_id": "28028830-83ed-45e2-b495-3b9ad9d3e988",
+      "released_at": "1998-03-02"
+    },
+    {
+      "name": "Lion's Eye Diamond",
+      "category": "fast_mana",
+      "category_label": "Fast Mana",
+      "set": "MIR",
+      "prices": {
+        "eur": 464.12,
+        "usd": 813.87
+      },
+      "scryfall_uri": "https://scryfall.com/card/mir/307/lions-eye-diamond?utm_source=api",
+      "scryfall_id": "63bacc32-d6ba-420c-9b49-299c08e5fb39",
+      "released_at": "1996-10-08"
+    },
+    {
+      "name": "Grim Monolith",
+      "category": "fast_mana",
+      "category_label": "Fast Mana",
+      "set": "ULG",
+      "prices": {
+        "eur": 310.34,
+        "usd": 471.51
+      },
+      "scryfall_uri": "https://scryfall.com/card/ulg/126/grim-monolith?utm_source=api",
+      "scryfall_id": "9ddc9fe1-17c8-4e1d-aeb8-c4214e881280",
+      "released_at": "1999-02-15"
+    },
+    {
+      "name": "Mana Crypt",
+      "category": "fast_mana",
+      "category_label": "Fast Mana",
+      "set": "BOK",
+      "prices": {
+        "eur": null,
+        "usd": null
+      },
+      "scryfall_uri": null,
+      "error": "not_found"
+    },
+    {
+      "name": "Metalworker",
+      "category": "fast_mana",
+      "category_label": "Fast Mana",
+      "set": "UDS",
+      "prices": {
+        "eur": 89.52,
+        "usd": 186.47
+      },
+      "scryfall_uri": "https://scryfall.com/card/uds/135/metalworker?utm_source=api",
+      "scryfall_id": "2050d414-71c7-4c42-a1ff-4c04068ba7f2",
+      "released_at": "1999-06-07"
+    },
+    {
+      "name": "Mana Vault",
+      "category": "fast_mana",
+      "category_label": "Fast Mana",
+      "set": "LEB",
+      "prices": {
+        "eur": 1201.8,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/leb/260/mana-vault?utm_source=api",
+      "scryfall_id": "a11f55e8-7f86-4ca9-b737-9a920d9cf282",
+      "released_at": "1993-10-04"
+    },
+    {
+      "name": "Yawgmoth's Will",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "USG",
+      "prices": {
+        "eur": 127.77,
+        "usd": 242.33
+      },
+      "scryfall_uri": "https://scryfall.com/card/usg/171/yawgmoths-will?utm_source=api",
+      "scryfall_id": "6d3e3c3a-d351-4d91-8884-312d4b6f540d",
+      "released_at": "1998-10-12"
+    },
+    {
+      "name": "Wheel of Fortune",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "LEB",
+      "prices": {
+        "eur": 1716.5,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/leb/184/wheel-of-fortune?utm_source=api",
+      "scryfall_id": "9052369f-840f-438e-b86d-e2f8d6339585",
+      "released_at": "1993-10-04"
+    },
+    {
+      "name": "Intuition",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "TMP",
+      "prices": {
+        "eur": 294.46,
+        "usd": 349.32
+      },
+      "scryfall_uri": "https://scryfall.com/card/tmp/70/intuition?utm_source=api",
+      "scryfall_id": "c99f6785-e5a1-4fdc-9fb5-e1a372e7e848",
+      "released_at": "1997-10-14"
+    },
+    {
+      "name": "Vampiric Tutor",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "VIS",
+      "prices": {
+        "eur": 50.46,
+        "usd": 75.82
+      },
+      "scryfall_uri": "https://scryfall.com/card/vis/72/vampiric-tutor?utm_source=api",
+      "scryfall_id": "0a07cba3-2e8d-48ec-a6f8-4d2edfcd833d",
+      "released_at": "1997-02-03"
+    },
+    {
+      "name": "Demonic Tutor",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "LEA",
+      "prices": {
+        "eur": 863.13,
+        "usd": null
+      },
+      "scryfall_uri": "https://scryfall.com/card/lea/104/demonic-tutor?utm_source=api",
+      "scryfall_id": "711d4d54-5520-4de8-9b93-79902ed8e562",
+      "released_at": "1993-08-05"
+    },
+    {
+      "name": "Survival of the Fittest",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "EXO",
+      "prices": {
+        "eur": 327.55,
+        "usd": 394.6
+      },
+      "scryfall_uri": "https://scryfall.com/card/exo/129/survival-of-the-fittest?utm_source=api",
+      "scryfall_id": "c060c178-3c0e-493f-b6f0-ead5b1d6f191",
+      "released_at": "1998-06-15"
+    },
+    {
+      "name": "Earthcraft",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "TMP",
+      "prices": {
+        "eur": 102.51,
+        "usd": 191.24
+      },
+      "scryfall_uri": "https://scryfall.com/card/tmp/222/earthcraft?utm_source=api",
+      "scryfall_id": "9dda7531-82a1-4f49-8858-601ddbc6e2bc",
+      "released_at": "1997-10-14"
+    },
+    {
+      "name": "Aluren",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "TMP",
+      "prices": {
+        "eur": 72.59,
+        "usd": 104.66
+      },
+      "scryfall_uri": "https://scryfall.com/card/tmp/213/aluren?utm_source=api",
+      "scryfall_id": "268403bc-733d-446e-a7c1-abc957c42bc2",
+      "released_at": "1997-10-14"
+    },
+    {
+      "name": "Recurring Nightmare",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "EXO",
+      "prices": {
+        "eur": 59.32,
+        "usd": 85.82
+      },
+      "scryfall_uri": "https://scryfall.com/card/exo/72/recurring-nightmare?utm_source=api",
+      "scryfall_id": "c8173030-1c33-417c-b8e9-79231b6a85a7",
+      "released_at": "1998-06-15"
+    },
+    {
+      "name": "Memory Jar",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "ULG",
+      "prices": {
+        "eur": 23.94,
+        "usd": 35.96
+      },
+      "scryfall_uri": "https://scryfall.com/card/ulg/129/memory-jar?utm_source=api",
+      "scryfall_id": "a15d33d6-7213-4482-a1be-ac0a73644af6",
+      "released_at": "1999-02-15"
+    },
+    {
+      "name": "Time Spiral",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "USG",
+      "prices": {
+        "eur": 63.77,
+        "usd": 98.11
+      },
+      "scryfall_uri": "https://scryfall.com/card/usg/103/time-spiral?utm_source=api",
+      "scryfall_id": "f3d62dbd-63db-4ac9-950f-9852627f23f2",
+      "released_at": "1998-10-12"
+    },
+    {
+      "name": "Mind Over Matter",
+      "category": "card_draw_tutors",
+      "category_label": "Card Draw & Tutors",
+      "set": "EXO",
+      "prices": {
+        "eur": 27.92,
+        "usd": 42.99
+      },
+      "scryfall_uri": "https://scryfall.com/card/exo/40/mind-over-matter?utm_source=api",
+      "scryfall_id": "6e091dd6-149f-46ea-bae0-224e79e3aacb",
+      "released_at": "1998-06-15"
+    },
+    {
+      "name": "Gilded Drake",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "USG",
+      "prices": {
+        "eur": 132.99,
+        "usd": 190.37
+      },
+      "scryfall_uri": "https://scryfall.com/card/usg/76/gilded-drake?utm_source=api",
+      "scryfall_id": "8de3fdae-cc2c-4a14-b15b-4fe1a983dfbf",
+      "released_at": "1998-10-12"
+    },
+    {
+      "name": "Null Rod",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "WTH",
+      "prices": {
+        "eur": 92.0,
+        "usd": 121.67
+      },
+      "scryfall_uri": "https://scryfall.com/card/wth/154/null-rod?utm_source=api",
+      "scryfall_id": "bc45f2cb-c256-4a0f-879a-c7db5b1a0b94",
+      "released_at": "1997-06-09"
+    },
+    {
+      "name": "Candelabra of Tawnos",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "ATQ",
+      "prices": {
+        "eur": 2357.67,
+        "usd": 2275.12
+      },
+      "scryfall_uri": "https://scryfall.com/card/atq/43/candelabra-of-tawnos?utm_source=api",
+      "scryfall_id": "35a335bf-7358-460f-b7c9-1e8bc4300f64",
+      "released_at": "1994-03-04"
+    },
+    {
+      "name": "Mishra's Workshop",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "ATQ",
+      "prices": {
+        "eur": 3872.49,
+        "usd": 3000.97
+      },
+      "scryfall_uri": "https://scryfall.com/card/atq/81/mishras-workshop?utm_source=api",
+      "scryfall_id": "135de5c7-6ac9-4b68-8f1a-97f120a4b125",
+      "released_at": "1994-03-04"
+    },
+    {
+      "name": "Bazaar of Baghdad",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "ARN",
+      "prices": {
+        "eur": 2240.64,
+        "usd": 1949.99
+      },
+      "scryfall_uri": "https://scryfall.com/card/arn/70/bazaar-of-baghdad?utm_source=api",
+      "scryfall_id": "ff37b863-f8c4-4584-8cc2-ac0e096e583f",
+      "released_at": "1993-12-17"
+    },
+    {
+      "name": "The Tabernacle at Pendrell Vale",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "LEG",
+      "prices": {
+        "eur": 2498.86,
+        "usd": 2899.99
+      },
+      "scryfall_uri": "https://scryfall.com/card/leg/307/the-tabernacle-at-pendrell-vale?utm_source=api",
+      "scryfall_id": "64bc9b1d-5818-4d9e-b771-e49af4ff9a5c",
+      "released_at": "1994-06-01"
+    },
+    {
+      "name": "City of Traitors",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "EXO",
+      "prices": {
+        "eur": 437.43,
+        "usd": 532.06
+      },
+      "scryfall_uri": "https://scryfall.com/card/exo/143/city-of-traitors?utm_source=api",
+      "scryfall_id": "a7a8b6b8-b95f-4014-b17a-a6d44d965995",
+      "released_at": "1998-06-15"
+    },
+    {
+      "name": "Lake of the Dead",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "ALL",
+      "prices": {
+        "eur": 79.53,
+        "usd": 125.57
+      },
+      "scryfall_uri": "https://scryfall.com/card/all/140/lake-of-the-dead?utm_source=api",
+      "scryfall_id": "aee806ce-effa-4244-9659-43246e944d80",
+      "released_at": "1996-06-10"
+    },
+    {
+      "name": "Volrath's Stronghold",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "STH",
+      "prices": {
+        "eur": 70.61,
+        "usd": 115.91
+      },
+      "scryfall_uri": "https://scryfall.com/card/sth/143/volraths-stronghold?utm_source=api",
+      "scryfall_id": "43bf015b-152e-4d67-b773-e75fb2487a32",
+      "released_at": "1998-03-02"
+    },
+    {
+      "name": "Copy Artifact",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "LEB",
+      "prices": {
+        "eur": 1099.45,
+        "usd": 1100.0
+      },
+      "scryfall_uri": "https://scryfall.com/card/leb/54/copy-artifact?utm_source=api",
+      "scryfall_id": "e24fe07d-1328-4165-b7a0-622b60cec481",
+      "released_at": "1993-10-04"
+    },
+    {
+      "name": "Transmute Artifact",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "ATQ",
+      "prices": {
+        "eur": 307.16,
+        "usd": 395.35
+      },
+      "scryfall_uri": "https://scryfall.com/card/atq/14/transmute-artifact?utm_source=api",
+      "scryfall_id": "6eab6765-eba3-4844-81ca-ae37a6e903df",
+      "released_at": "1994-03-04"
+    },
+    {
+      "name": "Power Artifact",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "ATQ",
+      "prices": {
+        "eur": 142.85,
+        "usd": 190.47
+      },
+      "scryfall_uri": "https://scryfall.com/card/atq/11/power-artifact?utm_source=api",
+      "scryfall_id": "e48bc89e-6da5-43da-b4e0-60d5f850199c",
+      "released_at": "1994-03-04"
+    },
+    {
+      "name": "Nether Void",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "LEG",
+      "prices": {
+        "eur": 377.33,
+        "usd": 507.99
+      },
+      "scryfall_uri": "https://scryfall.com/card/leg/113/nether-void?utm_source=api",
+      "scryfall_id": "2e72f8cb-5bc3-4711-9b7c-a6eea9a0beaf",
+      "released_at": "1994-06-01"
+    },
+    {
+      "name": "Chains of Mephistopheles",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "LEG",
+      "prices": {
+        "eur": 791.88,
+        "usd": 1183.06
+      },
+      "scryfall_uri": "https://scryfall.com/card/leg/91/chains-of-mephistopheles?utm_source=api",
+      "scryfall_id": "2bb0e884-5bb4-41f3-b04b-6f638357c166",
+      "released_at": "1994-06-01"
+    },
+    {
+      "name": "The Abyss",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "LEG",
+      "prices": {
+        "eur": 655.7,
+        "usd": 686.35
+      },
+      "scryfall_uri": "https://scryfall.com/card/leg/120/the-abyss?utm_source=api",
+      "scryfall_id": "86a27d68-3e58-4ade-976d-36381beed451",
+      "released_at": "1994-06-01"
+    },
+    {
+      "name": "Sliver Queen",
+      "category": "utility_staples",
+      "category_label": "Utility & Staples",
+      "set": "STH",
+      "prices": {
+        "eur": 163.13,
+        "usd": 300.22
+      },
+      "scryfall_uri": "https://scryfall.com/card/sth/129/sliver-queen?utm_source=api",
+      "scryfall_id": "235c0ece-aed0-4120-99cc-5d0e28fa70ab",
+      "released_at": "1998-03-02"
+    }
+  ]
+}
