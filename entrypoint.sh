@@ -2,16 +2,15 @@
 set -e
 
 echo "=== MTG Reserved List Price Tracker ==="
-echo "Starting initial price fetch..."
 
 cd /app
 
-# Initial fetch (fail gracefully)
-python3 fetch_prices.py || echo "Initial fetch failed, will retry on cron"
+# Initial fetch (non-blocking)
+python3 fetch_prices.py 2>&1 || echo "Initial fetch skipped (will run on cron)"
 
-# Start cron daemon (background)
-crond -f -l 2 &
+# Start cron in background (without -f so it daemonizes)
+crond -l 2
 
-# Start nginx (foreground)
-echo "Starting nginx..."
+# Start nginx
+echo "Starting nginx on :80..."
 exec nginx -g "daemon off;"
